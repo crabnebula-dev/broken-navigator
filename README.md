@@ -49,3 +49,86 @@ Tauri `commands` or in general Tauri applications.
 
 A similar project is the [OWASP Juice Shop](), which is focused on web applications running
 in the browser.
+
+
+## Roadmap 
+
+### How to present the Tauri App
+
+The first iteration could be to present it as a CTF where you can access the Tauri binaries directly in a virtual environment. Requires the code to be closed source until the CTF is over.
+Setup/History
+Group of friends doing a space tour in the Crab Nebula.
+The operator vanishes into space and no one is controlling the ship right now.
+They need to hack into the Tauri app console to save their lives and find and use the correct coordinates to get back to earth.
+They are presented with a game-like terminal interfaces of a navigation system
+Each terminal has one distinct function or step they need to perform.
+
+Find the correct coordinates located on the system (check out the config)
+Load the coordinates into the Navigator (find the right tauri command and invoke it with correct syntax)
+Synchronize the time with a remote to accurately synchronize the coordinates drift in spacetime
+
+
+### Structure of the app 
+
+Different levels correspond to a different Tauri app
+Each level has its own directory 
+From the UI you can only access start next level app if you have finished current level
+For fuzzing you can access the different directories directly with the source code 
+Metrics of the Tauri app are displayed (configuration, commands)
+
+### Challenges
+
+#### Level 1
+
+###### Learning
+
+Existence of Tauri commands
+Plugin Tauri commands can be restricted through the allowlist 
+
+###### Objectives
+Find the unlock passcode for the navigation terminal from the log file
+Open the application.log file in the $APP/logs folder
+Use the code to unlock the navigation terminal
+
+##### Privileges
+
+Access to the readDir and readFile Tauri commands
+Scope is the same as in Level 2
+```
+"fs": {
+       "readFile": true,
+       "scope": {
+         "allow": ["$APP/navigation/**"],
+         "deny": ["$APP/navigation/coordinates.flag"]
+       }
+     }
+```
+
+#### Level 2
+
+###### Learning
+
+App developers can create custom commands
+Custom commands are not restricted by the allowlist
+
+###### Objectives
+
+Find the correct navigation file with coordinates to earth
+Load the navigation file and copy these into the target input
+
+###### Privileges
+
+Access to the readDir and readFile Tauri commands
+Tauri custom command  load\_navigation\_file which can access system resources with no constraints with functions from rust std
+The flag is the coordinates written into $APP/navigation/earth.coordinates
+Allowlist configuration allows access to $APP/navigation/** but denies access to the flag file explicitly
+
+```
+"fs": {
+       "readFile": true,
+       "scope": {
+         "allow": ["$APP/navigation/**"],
+         "deny": ["$APP/navigation/coordinates.flag"]
+       }
+     }
+```
