@@ -35,6 +35,15 @@ We are left with some scattered notes which may help.
 Find each challenge in the `challenges` sub directory of this repository. Challenges can require
 knowledge gained from previous challenges but in general can be solved on their own.
 Recommendation is to start with `challenges/1` and move your way up.
+Please read the `README.md` of each challenge to understand the showcased issue.
+
+Make sure you have the correct version of the `tauri-cli` installed.
+
+```sh
+cd challenges/1
+npm install
+cargo tauri dev
+```
 
 ## Why is this application a thing?
 
