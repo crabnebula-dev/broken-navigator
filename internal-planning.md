@@ -5,6 +5,15 @@
 The first iteration could be to present it as a CTF where you can access the Tauri binaries directly in a virtual environment.
 Requires the code to be closed source until the CTF is over.
 
+### CTF
+
+We can use established solutions like [CTFd](https://ctfd.io/) to host this CTF instance one a cloud machine.
+For creation of docker containers with the vulnerable headless Tauri applications for each challenge and each participant/team we can possibly leverage a docker [plugin](https://github.com/offsecginger/CTFd-Docker-Challenges).
+We should create some very simple challenges and some harder ones, so we can attract the community. It should be a time boxed CTF which we leverage to gain attention to the project.
+
+The setup will be a Tauri application, which is the same frontend application as the headless one in the cloud but the frontend commands are intercepted and sent to the headless instance.
+This allows no leakage of backend code and only exposes the frontend code. Headless is possible via a custom Tauri `mock-runtime` we use for the fuzzer and the combination with the [`tauri-invoke-http`](https://github.com/tauri-apps/tauri-invoke-http) plugin.
+
 ## Setup/History
 
 Group of friends doing a space tour in the Crab Nebula.
