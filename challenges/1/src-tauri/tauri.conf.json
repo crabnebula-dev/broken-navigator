@@ -19,7 +19,12 @@
       },
       "fs": {
         "readFile": true,
-        "scope": ["$TEMP/**"]
+        "scope": {
+          "allow": [
+           "$APP/navigation/logs/*.log",
+           "$APP/navigation/docs/**"
+           ]
+        }
       }
     },
     "bundle": {
