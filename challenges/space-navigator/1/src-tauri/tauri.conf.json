@@ -19,11 +19,9 @@
       },
       "fs": {
         "readFile": true,
+        "readDir": true,
         "scope": {
-          "allow": [
-           "$APP/navigation/logs/*.log",
-           "$APP/navigation/docs/**"
-           ]
+          "allow": ["$RESOURCE/logs/*.log", "$RESOURCE/docs/**"]
         }
       }
     },
@@ -37,7 +35,8 @@
         "icons/128x128@2x.png",
         "icons/icon.icns",
         "icons/icon.ico"
-      ]
+      ],
+      "resources": ["../logs/*"]
     },
     "security": {
       "csp": null

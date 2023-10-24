@@ -1,109 +1,87 @@
 import { createSignal } from "solid-js";
 import logo from "./assets/logo.svg";
-import { invoke } from "@tauri-apps/api/tauri";
-import {BaseDirectory, readTextFile , writeTextFile } from "@tauri-apps/api/fs"
+import { invoke} from "@tauri-apps/api/tauri";
+import {BaseDirectory, readTextFile, readDir} from "@tauri-apps/api/fs"
 import "./App.css";
 
 function App() {
-  const [loadNavigation, setloadNavigation] = createSignal("");
-  const [name, setNavigationPath] = createSignal("");
 
-  const [writeNavigation, setwriteNavigation] = createSignal("");
-  const [path, setNavigationOutputPath] = createSignal("");
-  const [content, setNavigationOutputContent] = createSignal("");
+  const [password, setPassword] = createSignal("");
+  const [passwordResult, setcheckPassword] = createSignal("");
+  const [loadedLogs, setLoadLogFiles] = createSignal("");
+  const [path, setLogPath] = createSignal("");
+  const [content, setLogContent] = createSignal("");
 
-  async function load_navigation_readme() {
-    invokeTauriCommand(await invoke("load_navigation_readme", { path: name() }));
+  async function check_password() {
+    setcheckPassword(await invoke("check_password", { password: password() }));
   }
 
-  async function load_navigation_readme_via_frontend() {
-    setloadNavigation(await readTextFile(name(),{dir: BaseDirectory.Temp}).catch( error => setloadNavigation(error)));
+  async function load_navigation_log() {
+    setLogContent(await readTextFile(path(),{dir: BaseDirectory.Resource}).catch( (error: any) => setLogContent(error)));
   }
 
-  async function write_navigation_readme() {
-    setwriteNavigation(await invoke("write_navigation_event", { path: path(), eventData: content() }));
-  }
-
-  async function write_navigation_readme_via_frontend() {
-    setwriteNavigation(await writeTextFile(name(), content(),{dir: BaseDirectory.Temp}).catch( error => setloadNavigation(error)));
+  async function load_log_folder_structure() {
+    setLoadLogFiles(await readDir(path(),{dir: BaseDirectory.Resource}).catch( (error: any) => setLoadLogFiles(error)));
   }
 
   return (
     <div class="container">
       <h1>Space Navigator!</h1>
 
-      <h2>Loading</h2>
-      <p> It is possible to load the navigation file from custom written
-        Rust code or using the Tauri FS API. For Rust loading the absolute
-        Path is needed <code>/tmp/foobar</code> whereas with the
-        Tauri API, the folder is already pre-set to <code>$TMP</code> and
-        only the file name <code>foobar</code> is needed.
+      <h2>Password protected</h2>
+      <p>
+        The navigation features are password protected.
+        Please unlock with the correct password to access the navigation system.
       </p>
       <input
-          id="greet-input"
-          onChange={(e) => setNavigationPath(e.currentTarget.value)}
-          placeholder="Enter navigation file path..."
+          id="password-input"
+          onChange={(e) => setPassword(e.currentTarget.value)}
+          placeholder="*********"
         />
       <form
         class="row"
         onSubmit={(e) => {
           e.preventDefault();
-          load_navigation_readme();
+          check_password();
         }}
       >
-        <button type="submit">Load via Rust</button>
+        <button type="submit">Check Password</button>
       </form>
+      <p>Password check was: {passwordResult()}</p>
 
-      <form
-        class="row"
-        onSubmit={(e) => {
-          e.preventDefault();
-          load_navigation_readme_via_frontend();
-        }}
-      >
-        <button type="submit">Load via Frontend</button>
-      </form>
-
-      <p>{loadNavigation()}</p>
-
-      <h2>Writing</h2>
-      <p> It is possible to write the navigation file with custom written
-        Rust code or using the Tauri FS API. For Rust writing the absolute
-        Path is needed <code>/tmp/foobar</code> whereas with the
-        Tauri API, the folder is already pre-set to <code>$TMP</code> and
-        only the file name <code>foobar</code> is needed.
+      <p>
+        The system log is accessible without any authenticaton.
+        You can show available logs and load them.
       </p>
       <input
-          id="path-input"
-          onChange={(e) => setNavigationOutputPath(e.currentTarget.value)}
-          placeholder="Enter navigation file path..."
-        />
-         <input
-          id="content-input"
-          onChange={(e) => setNavigationOutputContent(e.currentTarget.value)}
-          placeholder="Enter navigation file content..."
+          id="log-path-input"
+          onChange={(e) => setLogPath(e.currentTarget.value)}
+          placeholder="Enter log file or directory path..."
         />
       <form
         class="row"
         onSubmit={(e) => {
           e.preventDefault();
-          write_navigation_readme();
+          load_navigation_log();
         }}
       >
-        <button type="submit">Write via Rust</button>
+        <button type="submit">Load Log</button>
       </form>
 
       <form
         class="row"
         onSubmit={(e) => {
           e.preventDefault();
-          write_navigation_readme_via_frontend();
+          load_log_folder_structure();
         }}
       >
-        <button type="submit">Write via Frontend</button>
+        <button type="submit">Show Files</button>
       </form>
 
-      <p>{writeNavigation()}</p>
+      <h3>Log Files</h3>
+      <p>{loadedLogs()}</p>
+      <h3>Log Content</h3>
+      <p>{content()}</p>
     </div>
   );
 }

@@ -92,7 +92,7 @@ How Tauri commands are manually constructed.(?)
 
 - The tauri configuration
 - format of the password/flag
-- (optional) directory listing of files/subfolders in the `navigation/logs` folder
+- directory listing of files/subfolders in the `navigation/logs` folder
 
 ## Flag
 

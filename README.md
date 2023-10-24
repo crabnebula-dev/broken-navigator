@@ -15,16 +15,16 @@ As you embark on your exploration of the CrabNebula, prepare to witness the awe-
 To help you navigate through this vast nebula, we have provided detailed documentation for some of the most popular destinations,
 which can be found by clicking on the links below:
 
-- [Crab Pulsar](): Discover the enigmatic heart of the nebula, where a rapidly spinning neutron star emits powerful beams of radiation.
+- [Crab Pulsar](https://en.wikipedia.org/wiki/Crab_Pulsar): Discover the enigmatic heart of the nebula, where a rapidly spinning neutron star emits powerful beams of radiation.
   Marvel at the spectacular light show and delve into the strange physics of this celestial phenomenon. (Click here for more information)
 
-- [Filamentary Structure](): Immerse yourself in the mesmerizing network of glowing threads that stretch across vast regions of the nebula.
+- [Filamentary Structure](https://en.wikipedia.org/wiki/Galaxy_filament): Immerse yourself in the mesmerizing network of glowing threads that stretch across vast regions of the nebula.
   Unravel the mysteries of their formation and encounter stunning celestial sculptures along the way. (Click here for more information)
 
-- [Supernova Remnant](): Encounter the remnants of a colossal stellar explosion, which gave birth to the CrabNebula itself.
+- [Supernova Remnant](https://en.wikipedia.org/wiki/Supernova_remnant): Encounter the remnants of a colossal stellar explosion, which gave birth to the CrabNebula itself.
   Unearth the secrets of this cataclysmic event and witness the lingering echoes of its once blinding brilliance. (Click here for more information)
 
-If you want to head back to [Earth](), we also provide you with the coordinates and calculations to return safely.
+If you want to head back to [Earth](https://en.wikipedia.org/wiki/Earth), we also provide you with the coordinates and calculations to return safely.
 
 Now, let's acquaint you with the remarkable features of the space ship you'll be operating throughout this magnificent journey.
 Our state-of-the-art vessel, the [Nebula Voyager](), has been meticulously designed to adapt and thrive in the harsh conditions of space travel.
