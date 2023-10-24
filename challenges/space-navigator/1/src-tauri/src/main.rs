@@ -13,12 +13,6 @@ fn main() {
         .init();
 
     tauri::Builder::default()
-        .invoke_handler(tauri::generate_handler![
-            commands::load_navigation_readme,
-            commands::write_navigation_event,
-            commands::run_external_event_validation,
-            commands::fetch_external_maps
-        ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

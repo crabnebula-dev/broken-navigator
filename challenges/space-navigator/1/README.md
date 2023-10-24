@@ -38,11 +38,9 @@ We got the configuration file of the welcome menu application:
       },
       "fs": {
         "readFile": true,
+        "readDir": true,
         "scope": {
-          "allow": [
-           "$APP/navigation/logs/*.log",
-           "$APP/navigation/docs/**"
-           ]
+          "allow": ["$APP/navigation/logs/*.log", "$APP/navigation/docs/**"]
         }
       }
     },
@@ -74,18 +72,21 @@ We got the configuration file of the welcome menu application:
 }
 ```
 
-The password seems to be leaked in one of the `.log` files and should look like `secure-password-*`.
+You can find out more about this configuration file at the Tauri [documentation]().
 
 ## Learning
 
 Existence of Tauri commands.
 Plugin Tauri commands can be restricted through the allowlist.
+How Tauri commands are manually constructed.(?)
 
 ## Application Layout
 
 - Welcome page
 - Shows some random llm generated documentation with nonsense
-- Able to load custom documentation files by manually entering the file path
+- Able to load custom documentation files by manually calling a Tauri API command
+  - The interface is prefilled with the shell open command to open the documentation(?)
+  - The endpoint values and parameters can be edited -> devtools like experience(?)
 
 ## Hints
 
@@ -107,8 +108,8 @@ Use the code to unlock the navigation terminal
 
 ## Privileges
 
-Access to the readDir and readFile Tauri commands
-Scope is the same as in Level 2
+Access to the `readDir` and `readFile` Tauri commands are needed.
+
 ```
 "fs": {
        "readFile": true,

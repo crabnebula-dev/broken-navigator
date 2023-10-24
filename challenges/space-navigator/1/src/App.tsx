@@ -13,7 +13,7 @@ function App() {
   const [content, setNavigationOutputContent] = createSignal("");
 
   async function load_navigation_readme() {
-    setloadNavigation(await invoke("load_navigation_readme", { path: name() }));
+    invokeTauriCommand(await invoke("load_navigation_readme", { path: name() }));
   }
 
   async function load_navigation_readme_via_frontend() {
