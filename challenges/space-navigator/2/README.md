@@ -9,8 +9,6 @@ Can you find them somewhere on the system?
 
 Once you have obtained it we can enter them into the destination of our trip.
 
-## Hints
-
 We got the interesting part of the configuration file of the navigator menu application:
 
 ```json
