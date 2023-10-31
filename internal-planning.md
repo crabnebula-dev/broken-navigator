@@ -34,8 +34,18 @@ Each terminal has one distinct function or step they need to perform.
 
 ## Structure of the app 
 
+- Each folder in the challenges directory has a theme of what to teach
 - Different levels correspond to a different Tauri app
 - Each level has its own directory 
 - From the UI you can only access start next level app if you have finished current level
 - For fuzzing you can access the different directories directly with the source code 
 - Metrics of the Tauri app are displayed (configuration, commands)
+
+## challenges/space-navigator
+
+All about teaching commands, invoking and abusing commands
+ideas for further challenges:
+
+- xss exploitation and then reading the flag via tauri command
+- same as before but isolation pattern has a stupid WAF implemented and you need to bypass some character filter
+- TBD
