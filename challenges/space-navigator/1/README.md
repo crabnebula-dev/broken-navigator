@@ -12,8 +12,6 @@ Can you find the password?
 
 Once you have obtained it we can control the navigation console.
 
-## Hints
-
 We got parts of the configuration file of the welcome menu application.
 It seems like a [Tauri](https://tauri.app/) application:
 
@@ -30,11 +28,10 @@ It seems like a [Tauri](https://tauri.app/) application:
         "readFile": true,
         "readDir": true,
         "scope": {
-          "allow": ["$RESOURCE/logs/*.log", "$RESOURCE/docs/**"]
+          "allow": ["$RESOURCE/logs/**", "$RESOURCE/logs"]
         }
       }
     }
-  }
 }
 ```
 
