@@ -5,3 +5,8 @@
 .logo.solid:hover {
   filter: drop-shadow(0 0 2em #2f5d90);
 }
+
+code {
+  display: block;
+  white-space: pre-wrap;
+}

@@ -1,4 +1,4 @@
-import { createSignal } from "solid-js";
+import { For, createSignal } from "solid-js";
 import logo from "./assets/logo.svg";
 import { invoke} from "@tauri-apps/api/tauri";
 import {BaseDirectory, readTextFile, readDir} from "@tauri-apps/api/fs"
@@ -8,21 +8,36 @@ function App() {
 
   const [password, setPassword] = createSignal("");
   const [passwordResult, setcheckPassword] = createSignal("");
-  const [loadedLogs, setLoadLogFiles] = createSignal("");
+  const [loadedLogs, setLoadLogFiles] = createSignal<string[]>([]);
   const [path, setLogPath] = createSignal("");
   const [content, setLogContent] = createSignal("");
+  
+
 
   async function check_password() {
     setcheckPassword(await invoke("check_password", { password: password() }));
   }
 
-  async function load_navigation_log() {
+  async function load_system_log() {
     setLogContent(await readTextFile(path(),{dir: BaseDirectory.Resource}).catch( (error: any) => setLogContent(error)));
   }
 
   async function load_log_folder_structure() {
-    setLoadLogFiles(await readDir(path(),{dir: BaseDirectory.Resource}).catch( (error: any) => setLoadLogFiles(error)));
+    setLoadLogFiles([""]);
+    let allPaths: string[] = [];
+    const entries = await readDir(path(),{dir: BaseDirectory.Resource}).catch( (error: any) => { setLoadLogFiles([error.toString()])})
+    if (entries)
+    {
+      // simplified top level directory display
+      for (const entry of entries) {
+        console.log(entry.path);
+        allPaths.push(entry.path);
+      }
+      setLoadLogFiles(allPaths);
+    }
   }
+
+
 
   return (
     <div class="container">
@@ -62,7 +77,7 @@ function App() {
         class="row"
         onSubmit={(e) => {
           e.preventDefault();
-          load_navigation_log();
+          load_system_log();
         }}
       >
         <button type="submit">Load Log</button>
@@ -79,9 +94,16 @@ function App() {
       </form>
 
       <h3>Log Files</h3>
-      <p>{loadedLogs()}</p>
+      <For each={loadedLogs()}>{(path) =>
+        <li>
+          {path}
+        </li>
+        }
+      </For>
       <h3>Log Content</h3>
-      <p>{content()}</p>
+      <p>
+        <code>{content()}</code>
+      </p>
     </div>
   );
 }

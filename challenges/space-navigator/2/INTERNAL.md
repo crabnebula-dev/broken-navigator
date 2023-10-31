@@ -14,7 +14,7 @@ Custom commands are not restricted by the allowlist
 
 - The tauri configuration
 - format of the password/flag
-- (optional) listing of custom function names
+- (optional) custom commands are compiled in frontend code but not exposed and manually invoked from the dev console
 
 ## Flag
 

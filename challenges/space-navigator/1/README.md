@@ -40,7 +40,7 @@ We got the configuration file of the welcome menu application:
         "readFile": true,
         "readDir": true,
         "scope": {
-          "allow": ["$APP/navigation/logs/*.log", "$APP/navigation/docs/**"]
+          "allow": ["$RESOURCE/logs/*.log", "$RESOURCE/docs/**"]
         }
       }
     },
@@ -54,7 +54,8 @@ We got the configuration file of the welcome menu application:
         "icons/128x128@2x.png",
         "icons/icon.icns",
         "icons/icon.ico"
-      ]
+      ],
+      "resources": ["../logs/*"]
     },
     "security": {
       "csp": null

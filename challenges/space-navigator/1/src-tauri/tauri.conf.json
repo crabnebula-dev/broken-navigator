@@ -21,7 +21,7 @@
         "readFile": true,
         "readDir": true,
         "scope": {
-          "allow": ["$RESOURCE/logs/*.log", "$RESOURCE/docs/**"]
+          "allow": ["$RESOURCE/logs/**", "$RESOURCE/logs"]
         }
       }
     },
@@ -36,7 +36,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "resources": ["../logs/*"]
+      "resources": ["logs/"]
     },
     "security": {
       "csp": null

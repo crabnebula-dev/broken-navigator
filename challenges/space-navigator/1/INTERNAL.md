@@ -1,47 +1,29 @@
 ## Learning
 
 Existence of Tauri commands.
-Plugin Tauri commands can be restricted through the allowlist.
-How Tauri commands are manually constructed.(?)
+(Plugin/Core) Tauri commands can be restricted through the allowlist.
 
 ## Application Layout
 
-- Welcome page
-- Shows some random llm generated documentation with nonsense
-- Able to load custom documentation files by manually calling a Tauri API command
-  - The interface is prefilled with the shell open command to open the documentation(?)
-  - The endpoint values and parameters can be edited -> devtools like experience(?)
+- Ship status system Interface
+- Able to load system event files by calling a Tauri API command
+- Able to check an administrator password
 
 ## Hints
 
 - The tauri configuration
-- format of the password/flag
-- directory listing of files/subfolders in the `navigation/logs` folder
+- Simple buttons to load files in a folder and to load file content
 
 ## Flag
 
-Can be found in `$APP/navigation/logs/app.log` in some tracing logs.
-Is a password logged by the call to the `console_login` function.
-Logs can be dummy logs looking like from the `tokio-tracing` crate.
+Can be found in `$RESOURCE/logs/navigator.log` in some tracing logs.
 
 ## Objectives
 
 Find the unlock passcode for the navigation terminal from the log file
-Open the application.log file in the $APP/logs folder
+Open the application.log file in the $RESOURCE/logs folder
 Use the code to unlock the navigation terminal
 
 ## Privileges
 
 Access to the `readDir` and `readFile` Tauri commands are needed.
-
-```
-"fs": {
-       "readFile": true,
-       "scope": {
-         "allow": [
-          "$APP/navigation/logs/*.log",
-          "$APP/navigation/docs/**"
-          ]
-       }
-     }
-```
