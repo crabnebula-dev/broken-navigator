@@ -45,7 +45,7 @@ function App() {
 
       <h2>Password protected</h2>
       <p>
-        The navigation features are password protected.
+        The features are password protected.
         Please unlock with the correct password to access the navigation system.
       </p>
       <input
@@ -80,7 +80,7 @@ function App() {
           load_system_log();
         }}
       >
-        <button type="submit">Load Log</button>
+        <button type="submit">Load Log File</button>
       </form>
 
       <form
@@ -90,7 +90,7 @@ function App() {
           load_log_folder_structure();
         }}
       >
-        <button type="submit">Show Files</button>
+        <button type="submit">Show Files in Directory</button>
       </form>
 
       <h3>Log Files</h3>

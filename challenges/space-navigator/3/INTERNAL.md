@@ -5,6 +5,9 @@ Tauri commands can be manually invoked by crafting the command payload and invok
 ## Application Layout
 
 - Navigator Page
+  - coordinates list
+  - some images displayed when clicking on coordinates
+  - some disabled dummy buttons and an error message that the system interface is currently not operable
 - Developer Console enabled but hidden (they should have learned the shortcut before so just enabled but not shown)
 - Able to send the coordinates to a custom command
   - get validation code that coordinates are in the system

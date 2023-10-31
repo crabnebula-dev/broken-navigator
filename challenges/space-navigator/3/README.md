@@ -9,3 +9,11 @@ backend system via the developer console of the application.
 Once we have the coordinates in the system the ship can start to set
 course on Earth. Finally!
 It should give us a confirmation code once the coordinates are successfully set.
+
+## Hints
+
+There are some custom commands we know about. For some we know more but some are still
+obscure to us.
+
+> TODO: Insert some documentation for custom commmands where some have extended documentation
+and for some we only have partial knowlegde about the signature and payload.
