@@ -10,11 +10,29 @@ Once we have the coordinates `102, 108, 97, 103` in the system the ship can star
 course on Earth. Finally!
 It should give us a confirmation code once the coordinates are successfully set.
 
+We should infer where the cordinates need to be written to from the configuration:
+
+```json
+ "tauri": {
+    "allowlist": {
+      "shell": {
+        "all": false,
+        "open": true
+      },
+      "fs": {
+        "writeFile": true,
+        "scope": {
+          "allow": ["$RESOURCE/navigation/active/Earth.cord"]
+        }
+      }
+    },
+```
+
 There seems like an internal API called
 [`writeTextFile`](https://tauri.app/v1/api/js/fs#writetextfile),
 which seems perfect to insert the coordinates into the current coordinates folder.
-We sadly can not figure out to call it directly. It seems like the function signature
-was wrapped.
+We sadly can not figure out how to call it directly. It seems like the function signature
+was wrapped around `writeFile`.
 
 We found the original [code](https://github.com/tauri-apps/tauri/blob/2c7d683ae39716f06298849d8a01f81c6fd6f153/core/tauri/src/endpoints/file_system.rs#L76):
 
@@ -29,6 +47,6 @@ We found the original [code](https://github.com/tauri-apps/tauri/blob/2c7d683ae3
 ```
 
 We also got a logged request of another internal APi which was
-triggered manually and where no function was wrapped in the frontend code.
+triggered manually and where no function was wrapped in the frontend code:
 
 `window.__TAURI_INVOKE__("tauri",{__tauriModule:"Shell",message:{cmd:"open",path: "https://tauri.app"}})`
