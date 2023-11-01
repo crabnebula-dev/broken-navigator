@@ -36,3 +36,5 @@ It seems like a [Tauri](https://tauri.app/) application:
 ```
 
 You can find out more about this configuration file at the Tauri [documentation](https://tauri.app/v1/api/config/).
+The `$RESOURCE` path seems to be different for each operating system.
+Luckily this path is handled by Tauri and you can use relative paths like `logs/`.
