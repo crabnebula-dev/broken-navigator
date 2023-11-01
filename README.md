@@ -77,10 +77,15 @@ We are left with some scattered notes which may help.
 
 ## Where To Start?
 
-Find each challenge in the `challenges` sub directory of this repository. Challenges can require
+Find each challenge in the `challenges/<component>/[1-10]` sub directory of this repository. We have multiple components of the ship, where each component contains themed challenges. 
+
+Challenges can require
 knowledge gained from previous challenges but in general can be solved on their own.
 Recommendation is to start with `challenges/space-navigator/1` and move your way up.
 Please read the `README.md` of each challenge to understand the showcased issue.
+
+Please do **not** read the `INTERNAL.md` of each challenge as they contain
+solutions and internal structuring of the challenge, which would spoiler you playing the challenge.
 
 Make sure you have the correct version of the `tauri-cli` installed.
 

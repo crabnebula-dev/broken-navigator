@@ -3,5 +3,5 @@ resolver = "2"
 members = [
     "challenges/space-navigator/1/src-tauri",
     "challenges/space-navigator/2/src-tauri",
-    #"challenges/space-navigator/3/src-tauri",
+    "challenges/space-navigator/3/src-tauri",
 ]
