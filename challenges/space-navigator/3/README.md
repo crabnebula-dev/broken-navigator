@@ -6,7 +6,7 @@ We already know the coordinates but can not get them into our system.
 The input interface seems broken and we maybe need to directly speak to
 backend system via the developer console of the application.
 
-Once we have the coordinates `102, 108, 97, 103` in the system the ship can start to set
+Once we have the coordinates `[102, 108, 97, 103]` in the system the ship can start to set
 course on Earth. Finally!
 It should give us a confirmation code once the coordinates are successfully set.
 
@@ -29,7 +29,7 @@ We should infer where the cordinates need to be written to from the configuratio
 ```
 
 There seems like an internal API called
-[`writeTextFile`](https://tauri.app/v1/api/js/fs#writetextfile),
+[writeTextFile](https://tauri.app/v1/api/js/fs#writetextfile),
 which seems perfect to insert the coordinates into the current coordinates folder.
 We sadly can not figure out how to call it directly. It seems like the function signature
 was wrapped around `writeFile`.
