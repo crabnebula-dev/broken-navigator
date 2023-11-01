@@ -19,7 +19,6 @@
 [2022-07-01T08:41:05Z] TRACE - Scanning unidentified object for potential threat.
 [2022-07-01T08:41:25Z] TRACE - Unidentified object confirmed as space debris, no immediate danger.
 [2022-07-01T08:42:20Z] INFO - Entering warp speed, adjusting navigational coordinates.
-[2022-07-01T08:42:20Z] TRACE - Navigation login successfull with space-nebula-password
 [2022-07-01T08:42:25Z] DEBUG - Warp drive engaged, space-time distortion detected.
 [2022-07-01T08:42:35Z] TRACE - Ship's clock synchronized with warp field.
 [2022-07-01T08:42:40Z] TRACE - Time dilation effects within expected parameters.
