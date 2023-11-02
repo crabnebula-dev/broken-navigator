@@ -8,7 +8,7 @@ mod commands;
 fn main() {
     let _collector = tracing_subscriber::fmt()
         // filter spans/events with level TRACE or higher.
-        .with_max_level(Level::TRACE)
+        .with_max_level(Level::DEBUG)
         // set default subscriber.
         .init();
 
