@@ -1,110 +1,28 @@
-import { For, createSignal } from "solid-js";
-import logo from "./assets/logo.svg";
-import { invoke} from "@tauri-apps/api/tauri";
-import {BaseDirectory, readTextFile, readDir} from "@tauri-apps/api/fs"
-import "./App.css";
+import Layout from "space-navigator-shared/layout";
+import readme from "../README.md?raw";
+import Status from "./Status.tsx";
+import PasswordForm from "./PasswordForm.tsx";
+import DirectorySearcher from "./DirectorySearcher.tsx";
 
 function App() {
-
-  const [password, setPassword] = createSignal("");
-  const [passwordResult, setcheckPassword] = createSignal("");
-  const [loadedLogs, setLoadLogFiles] = createSignal<string[]>([]);
-  const [path, setLogPath] = createSignal("");
-  const [content, setLogContent] = createSignal("");
-  
-
-
-  async function check_password() {
-    setcheckPassword(await invoke("check_password", { password: password() }));
-  }
-
-  async function load_system_log() {
-    setLogContent(await readTextFile(path(),{dir: BaseDirectory.Resource}).catch( (error: any) => setLogContent(error)));
-  }
-
-  async function load_log_folder_structure() {
-    setLoadLogFiles([""]);
-    let allPaths: string[] = [];
-    const entries = await readDir(path(),{dir: BaseDirectory.Resource}).catch( (error: any) => { setLoadLogFiles([error.toString()])})
-    if (entries)
-    {
-      // simplified top level directory display
-      for (const entry of entries) {
-        console.log(entry.path);
-        allPaths.push(entry.path);
-      }
-      setLoadLogFiles(allPaths);
-    }
-  }
-
-
-
   return (
-    <div class="container">
-      <h1>Space Navigator!</h1>
-
-      <h2>Password protected</h2>
-      <p>
-        The features are password protected.
-        Please unlock with the correct password to access the navigation system.
-      </p>
-      <input
-          id="password-input"
-          onChange={(e) => setPassword(e.currentTarget.value)}
-          placeholder="*********"
-        />
-      <form
-        class="row"
-        onSubmit={(e) => {
-          e.preventDefault();
-          check_password();
-        }}
-      >
-        <button type="submit">Check Password</button>
-      </form>
-      <p>Password check was: {passwordResult()}</p>
-
-      <p>
-        The system log is accessible without any authenticaton.
-        You can show available logs and load them.
-      </p>
-      <input
-          id="log-path-input"
-          onChange={(e) => setLogPath(e.currentTarget.value)}
-          placeholder="Enter log file or directory path..."
-        />
-      <form
-        class="row"
-        onSubmit={(e) => {
-          e.preventDefault();
-          load_system_log();
-        }}
-      >
-        <button type="submit">Load Log File</button>
-      </form>
-
-      <form
-        class="row"
-        onSubmit={(e) => {
-          e.preventDefault();
-          load_log_folder_structure();
-        }}
-      >
-        <button type="submit">Show Files in Directory</button>
-      </form>
-
-      <h3>Log Files</h3>
-      <For each={loadedLogs()}>{(path) =>
-        <li>
-          {path}
-        </li>
-        }
-      </For>
-      <h3>Log Content</h3>
-      <p>
-        <code>{content()}</code>
-      </p>
-    </div>
+    <Layout markdown={readme}>
+      <div class="flex justify-around">
+        <Status />
+        <PasswordForm />
+      </div>
+      <article class="prose prose-invert my-4 xl:prose-lg">
+        <h2>Space Navigator!</h2>
+        <p>
+          We need to access our navigation system, but it seems to be locked
+          down and there's no way we can go anywhere if you don't remember the
+          password. The navigation logs don't seem to need any authentication -
+          it seems our last hope lies in the password being logged
+          accidentally...
+        </p>
+      </article>
+      <DirectorySearcher />
+    </Layout>
   );
 }
 

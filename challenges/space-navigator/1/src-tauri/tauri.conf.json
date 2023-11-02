@@ -22,6 +22,9 @@
         "scope": {
           "allow": ["$RESOURCE/logs/**", "$RESOURCE/logs"]
         }
+      },
+      "path": {
+        "all": true
       }
     },
     "bundle": {
