@@ -1,4 +1,4 @@
-import type { VoidComponent} from 'solid-js';
+import type { VoidComponent } from "solid-js";
 import Layout from "space-navigator-shared/layout";
 import README from "../README.md?raw";
 
