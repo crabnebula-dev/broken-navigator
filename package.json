@@ -1,0 +1,5 @@
+{
+    "name": "broken-navigator-workspace",
+    "private": true,
+    "workspaces": ["challenges/space-navigator/*"]
+}

@@ -90,8 +90,8 @@ solutions and internal structuring of the challenge, which would spoiler you pla
 Make sure you have the correct version of the `tauri-cli` installed.
 
 ```sh
-cd challenges/space-navigator/1
 npm install
+cd challenges/space-navigator/1
 cargo tauri dev
 ```
 
