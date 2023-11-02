@@ -30,38 +30,34 @@ declare module "solid-js" {
   }
 }
 
-let base;
-try {
-  base = await resourceDir();
-} catch (e) {
-  console.warn("💩", "not in a tauri app, cant find base resource path");
+const fetchFiles = async () => {
+    const base = await resourceDir();
+    return readDir(input(), {
+        dir: BaseDirectory.Resource,
+    })
+        .then((entries) => {
+            const paths = [];
+            for (const entry of entries) {
+                let relative = entry.path.slice(base.length);
+                console.log("found file", relative);
+                paths.push(relative);
+            }
+
+            setError(null);
+            setFiles(paths);
+        })
+        .catch((error) => {
+            setFiles([]);
+            if (error.startsWith("path not allowed on the configured scope")) {
+                setError(`Path not allowed: $RESOURCE/${input()}`);
+            } else if (error.startsWith("No such file or directory (os error 2)")) {
+                setError(`Path not found: $RESOURCE/${input()}`);
+            } else {
+                console.error("💩", "Unexpected IO Error", error);
+            }
+        });
 }
 
-const fetchFiles = async () =>
-  readDir(input(), {
-    dir: BaseDirectory.Resource,
-  })
-    .then((entries) => {
-      const paths = [];
-      for (const entry of entries) {
-        let relative = entry.path.slice(base.length);
-        console.log("found file", relative);
-        paths.push(relative);
-      }
-
-      setError(null);
-      setFiles(paths);
-    })
-    .catch((error) => {
-      setFiles([]);
-      if (error.startsWith("path not allowed on the configured scope")) {
-        setError(`Path not allowed: $RESOURCE/${input()}`);
-      } else if (error.startsWith("No such file or directory (os error 2)")) {
-        setError(`Path not found: $RESOURCE/${input()}`);
-      } else {
-        console.error("💩", "Unexpected IO Error", error);
-      }
-    });
 
 const NoFiles: VoidComponent = () => (
   <Show
