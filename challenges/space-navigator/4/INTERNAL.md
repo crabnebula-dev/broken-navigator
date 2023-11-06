@@ -1,6 +1,7 @@
 ## Learning
 
-Custom commands can be manually invoked by crafting the command payload and invoking it via `__TAURI__.invoke()`. Custom commands can bypass the allowlist.
+Custom commands can be manually invoked by crafting the command payload and invoking it via `__TAURI__.invoke()`.
+Custom command invoke strings are different than Tauri module invokes.
 
 
 ## Application Layout
@@ -15,15 +16,14 @@ Custom commands can be manually invoked by crafting the command payload and invo
 
 ## Hints
 
-- Custom Tauri command documentation
-  - function signature
-  - parameters with description and scheme
+- Custom Tauri command name
 - The tauri configuration
-- Example invoke string from another tauri command
-
 ## Flag
 
 Will be returned once the Tauri API command is correctly invoked.
+
+`await window.__TAURI_INVOKE__("correct_coordinates", { "vector": [1,2,3,4]})`
+
 
 ## Objectives
 
@@ -31,4 +31,4 @@ Load the navigation data into the backend system.
 
 ## Privileges
 
-Access to the custom `set_coordinates` Tauri command.
+Access to the custom `correct_coordinates` Tauri command.
