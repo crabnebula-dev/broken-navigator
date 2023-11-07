@@ -7,10 +7,6 @@ reason the navigation system requires us to make a correction. Earth seems to ha
 vector `[1,2,3,4]`.
 We can not use the Tauri `writeFile` command, as the
 filesystem module was disabled.
-There seems to be a promising custom command `correct_coordinates` to correct this, but the UI is still broken.
-
-It should give us a confirmation code flag after setting of the correct spacetime adjustment.
-
 The configuration doesn't seem to help us this time.
 
 ```json
@@ -22,3 +18,8 @@ The configuration doesn't seem to help us this time.
       }
     }
 ```
+
+There seems to be a promising custom command `correct_coordinates` to correct this, but the UI is still broken.
+We should be able to figure out how to call it by looking at some command documentation.
+
+It should give us a confirmation code flag after setting of the correct spacetime adjustment.
