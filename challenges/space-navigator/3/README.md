@@ -50,3 +50,5 @@ We also got a logged request of another internal APi which was
 triggered manually and where no function was wrapped in the frontend code:
 
 `await window.__TAURI_INVOKE__("tauri",{__tauriModule:"Shell",message:{cmd:"open",path: "https://tauri.app"}})`
+
+More explanation is mentioned in the [Tauri Command Documentation](https://tauri.app/v1/guides/features/command/).
