@@ -157,6 +157,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "broken-navigator-four"
+version = "0.1.0"
+dependencies = [
+ "serde",
+ "serde_json",
+ "tauri",
+ "tauri-build",
+ "tracing",
+]
+
+[[package]]
 name = "broken-navigator-one"
 version = "0.0.0"
 dependencies = [

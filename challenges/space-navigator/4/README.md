@@ -1,17 +1,25 @@
-# Level 3
+# Level 4
 
 ## Description
 
-We already configured the coordinates to Earth in the last procedure but it seems
-like we have left out some important spacetime variable.
-We can not change the file anymore, so we need to figure out a way to add the
-spacetime `[12,45,34,55]` variable to the coordinate.
+We did set the coordinates correctly, but for some
+reason the navigation system requires us to make a correction. Earth seems to have shifted by the spacetime
+vector `[1,2,3,4]`.
+We can not use the Tauri `writeFile` command, as the
+filesystem module was disabled.
+The configuration doesn't seem to help us this time.
 
-It should give us a confirmation code of the correct space drift calculation
-once the coordinates are successfully set and the system accepted the destination.
+```json
+"tauri": {
+    "allowlist": {
+      "shell": {
+        "all": false,
+        "open": true
+      }
+    }
+```
 
-There are some custom commands we know about. For some we know more but some are still
-obscure to us.
+There seems to be a promising custom command `correct_coordinates` to correct this, but the UI is still broken.
+We should be able to figure out how to call it by looking at some command documentation.
 
-> TODO: Insert some documentation for custom commmands where some have extended documentation
-and for some we only have partial knowlegde about the signature and payload.
+It should give us a confirmation code flag after setting of the correct spacetime adjustment.
