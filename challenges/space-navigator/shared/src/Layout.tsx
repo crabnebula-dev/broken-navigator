@@ -10,6 +10,7 @@ const Layout: ParentComponent<MarkdownProps> = ({ markdown, children }) => {
         <Tabs>
           <Tab is={ETab.ABOUT}>About</Tab>
           <Tab is={ETab.CHALLENGE}>Challenge</Tab>
+          <Tab is={ETab.SOLVE}>Solution</Tab>        
         </Tabs>
       </header>
       <main class="mx-4 flex flex-col items-center sm:mx-0">
