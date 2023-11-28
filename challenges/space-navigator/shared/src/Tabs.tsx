@@ -8,10 +8,13 @@ import {
   useContext,
 } from "solid-js";
 import Markdown, { MarkdownProps } from "./Markdown";
+import Status from "./Status";
+import FlagForm from "./FlagForm ";
 
 export enum ETab {
   ABOUT = "about",
   CHALLENGE = "challenge",
+  SOLVE = "solution"
 }
 
 // we need to explicitly mark the type as a tuple
@@ -66,6 +69,12 @@ export const TabPanel: ParentComponent<MarkdownProps> = ({
         <Markdown markdown={markdown} />
       </Match>
       <Match when={tab() === ETab.CHALLENGE}>{children}</Match>
+      <Match when={tab() === ETab.SOLVE}>
+        <div class="flex justify-around">
+          <Status />
+          <FlagForm />
+        </div>
+      </Match>
     </Switch>
   );
 };

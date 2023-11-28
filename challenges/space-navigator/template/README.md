@@ -1,3 +1,9 @@
+# Challenge Template
+
+This is a template application we use to branch off, when starting with a new challenge.
+Challenges are expected to implement their own `check_flag` command to verify a flag input.
+
+
 ## Usage
 
 Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
