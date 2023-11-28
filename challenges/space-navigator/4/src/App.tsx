@@ -1,17 +1,17 @@
 import type { VoidComponent } from "solid-js";
 import Layout from "space-navigator-shared/layout";
 import README from "../README.md?raw";
-import PasswordForm from "./PasswordForm.tsx";
-import Status from "./Status.tsx";
-
 
 const App: VoidComponent = () => {
+
   return (
     <Layout markdown={README}>
-      <div class="flex justify-around">
-        <Status />
-        <PasswordForm />
-      </div>
+      <article class="prose prose-invert my-4 xl:prose-lg">
+      <h3>Coordinate Adjuster!</h3>
+      <p>This tool helps us to adjust coordinates but the whole user
+        interface seems broken. Maybe hacking it works...
+      </p>
+      </article>
     </Layout>
   );
 };

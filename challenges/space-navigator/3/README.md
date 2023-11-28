@@ -34,7 +34,7 @@ which seems perfect to insert the coordinates into the current coordinates folde
 We sadly can not figure out how to call it directly. It seems like the function signature
 was wrapped around `writeFile`.
 
-We found the original [code](https://github.com/tauri-apps/tauri/blob/2c7d683ae39716f06298849d8a01f81c6fd6f153/core/tauri/src/endpoints/file_system.rs#L76):
+We found the internal rust api [code](https://github.com/tauri-apps/tauri/blob/2c7d683ae39716f06298849d8a01f81c6fd6f153/core/tauri/src/endpoints/file_system.rs#L76) for `writeFile`:
 
 ```rust
   /// The write file API.
@@ -47,7 +47,7 @@ We found the original [code](https://github.com/tauri-apps/tauri/blob/2c7d683ae3
 ```
 
 We also got a logged request of another internal APi which was
-triggered manually and where no function was wrapped in the frontend code:
+triggered manually and where no convenience code was added in the frontend code:
 
 `await window.__TAURI_INVOKE__("tauri",{__tauriModule:"Shell",message:{cmd:"open",path: "https://tauri.app"}})`
 

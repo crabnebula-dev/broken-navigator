@@ -7,7 +7,7 @@ import {
   VoidComponent,
 } from "solid-js";
 import { BaseDirectory, readDir, readTextFile } from "@tauri-apps/api/fs";
-import { textInput } from "./util.tsx";
+import { textInput } from "space-navigator-shared/util";
 import { resourceDir } from "@tauri-apps/api/path";
 
 export const [input, setInput] = createSignal("");

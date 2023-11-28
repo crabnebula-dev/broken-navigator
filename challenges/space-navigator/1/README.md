@@ -1,5 +1,11 @@
 # Level 1
 
+## Introduction
+
+Welcome to the `space-navigator` challenges. For each level you will be presented with a Tauri app.
+The application layout is similar for each level. You will get a description of the challenge ahead of you found in the "*About*" tab, the challenge itself in the "*Challenge*" tab and to verify you found the correct solution you can test
+it in the "*Solution*" tab. Please note that the solution flag layout can be different for each challenge. To validate a flag just insert it into the solution input field and press *enter*.
+
 ## Description
 
 We tried to open up the navigation console to locate the coordinates for earth but
