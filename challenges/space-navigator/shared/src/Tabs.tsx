@@ -14,7 +14,7 @@ import FlagForm from "./FlagForm ";
 export enum ETab {
   ABOUT = "about",
   CHALLENGE = "challenge",
-  SOLVE = "solution"
+  SOLVE = "solution",
 }
 
 // we need to explicitly mark the type as a tuple

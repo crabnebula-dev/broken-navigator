@@ -77,7 +77,7 @@ We are left with some scattered notes which may help.
 
 ## Where To Start?
 
-Find each challenge in the `challenges/<component>/[1-10]` sub directory of this repository. We have multiple components of the ship, where each component contains themed challenges. 
+Find each challenge in the `challenges/<component>/[1-10]` sub directory of this repository. We have multiple components of the ship, where each component contains themed challenges.
 
 Challenges can require
 knowledge gained from previous challenges but in general can be solved on their own.

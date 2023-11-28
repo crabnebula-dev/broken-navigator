@@ -14,23 +14,30 @@ const App: VoidComponent = () => {
   return (
     <Layout markdown={README}>
       <article class="prose prose-invert my-4 xl:prose-lg">
-      <h3>Coordinate Manager!</h3>
-      <p>This tool helps us to change and set coordinates but the whole user
-        interface seems broken. This button is the only thing that still works...
-      </p>
-      <div class="relative w-8/12">
-        <form
-          id="flag-print-form"
-          class="row"
-          onSubmit={(e) => {
-            e.preventDefault();
-            get_validation_flag();
-          }}
-        >
-        <button class="h-10 rounded bg-slate-800 px-4 text-base/4" type="submit">Check Coordinates</button>
-        </form>
-      </div>
-      <p>{flag()}</p>
+        <h3>Coordinate Manager!</h3>
+        <p>
+          This tool helps us to change and set coordinates but the whole user
+          interface seems broken. This button is the only thing that still
+          works...
+        </p>
+        <div class="relative w-8/12">
+          <form
+            id="flag-print-form"
+            class="row"
+            onSubmit={(e) => {
+              e.preventDefault();
+              get_validation_flag();
+            }}
+          >
+            <button
+              class="h-10 rounded bg-slate-800 px-4 text-base/4"
+              type="submit"
+            >
+              Check Coordinates
+            </button>
+          </form>
+        </div>
+        <p>{flag()}</p>
       </article>
     </Layout>
   );
