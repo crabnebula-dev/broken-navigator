@@ -29,12 +29,12 @@ We should infer where the cordinates need to be written to from the configuratio
 ```
 
 There seems like an internal API called
-[writeTextFile](https://tauri.app/v1/api/js/fs#writetextfile),
+<a href="https://tauri.app/v1/api/js/fs#writetextfile" rel="noopener noreferrer" target="_blank">writeTextFile</a>,
 which seems perfect to insert the coordinates into the current coordinates folder.
 We sadly can not figure out how to call it directly. It seems like the function signature
 was wrapped around `writeFile`.
 
-We found the internal rust api [code](https://github.com/tauri-apps/tauri/blob/2c7d683ae39716f06298849d8a01f81c6fd6f153/core/tauri/src/endpoints/file_system.rs#L76) for `writeFile`:
+We found the internal rust api <a href="https://github.com/tauri-apps/tauri/blob/2c7d683ae39716f06298849d8a01f81c6fd6f153/core/tauri/src/endpoints/file_system.rs#L76" rel="noopener noreferrer" target="_blank">code</a> for `writeFile`:
 
 ```rust
   /// The write file API.
@@ -51,4 +51,4 @@ triggered manually and where no convenience code was added in the frontend code:
 
 `await window.__TAURI_INVOKE__("tauri",{__tauriModule:"Shell",message:{cmd:"open",path: "https://tauri.app"}})`
 
-More explanation is mentioned in the [Tauri Command Documentation](https://tauri.app/v1/guides/features/command/).
+More explanation is mentioned in the <a href="https://tauri.app/v1/guides/features/command/" rel="noopener noreferrer" target="_blank">Tauri Command Documentation</a>.

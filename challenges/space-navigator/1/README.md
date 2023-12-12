@@ -19,7 +19,7 @@ Can you find the password?
 Once you have obtained it we can control the navigation console.
 
 We got parts of the configuration file of the welcome menu application.
-It seems like a [Tauri](https://tauri.app/) application:
+It seems like a <a href="https://tauri.app/" rel="noopener noreferrer" target="_blank">Tauri</a> application.
 
 ```json
 {
@@ -41,6 +41,6 @@ It seems like a [Tauri](https://tauri.app/) application:
 }
 ```
 
-You can find out more about this configuration file at the Tauri [documentation](https://tauri.app/v1/api/config/).
+You can find out more about this configuration file at the Tauri <a href="https://tauri.app/v1/api/config/" rel="noopener noreferrer" target="_blank">documentation</a>.
 The `$RESOURCE` path seems to be different for each operating system.
 Luckily this path is handled by Tauri and you can use relative paths like `logs/`.
