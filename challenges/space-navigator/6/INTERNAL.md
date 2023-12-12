@@ -7,7 +7,7 @@ interact with the API.
 
 ## Application Layout
 
-- 
+-
 
 ## Hints
 

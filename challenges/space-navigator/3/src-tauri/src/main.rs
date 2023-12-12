@@ -13,7 +13,10 @@ fn main() {
         .init();
 
     tauri::Builder::default()
-        .invoke_handler(tauri::generate_handler![commands::get_validation_code])
+        .invoke_handler(tauri::generate_handler![
+            commands::get_validation_code,
+            commands::check_flag
+        ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

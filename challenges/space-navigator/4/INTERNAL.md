@@ -3,7 +3,6 @@
 Custom commands can be manually invoked by crafting the command payload and invoking it via `__TAURI__.invoke()`.
 Custom command invoke strings are different than Tauri module invokes.
 
-
 ## Application Layout
 
 - Navigator Page
@@ -18,12 +17,12 @@ Custom command invoke strings are different than Tauri module invokes.
 
 - Custom Tauri command name
 - The tauri configuration
+
 ## Flag
 
 Will be returned once the Tauri API command is correctly invoked.
 
 `await window.__TAURI_INVOKE__("correct_coordinates", { "vector": [1,2,3,4]})`
-
 
 ## Objectives
 

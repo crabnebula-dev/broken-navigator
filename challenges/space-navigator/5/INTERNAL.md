@@ -7,14 +7,14 @@ The understanding of why and how this can be abused will be displayed in this ch
 
 ## Application Layout
 
-- 
+-
 
 ## Hints
 
 - Tauri version string
 - A link to the advisories
 - Tauri configuration
-- Input where external domains can be inserted 
+- Input where external domains can be inserted
 
 ## Flag
 

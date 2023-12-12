@@ -1,4 +1,4 @@
-# Internal Planning 
+# Internal Planning
 
 ## How to present the Tauri App
 
@@ -23,7 +23,7 @@ They need to hack into the Tauri app console to save their lives and find and us
 They are presented with a game-like terminal interfaces of a navigation system
 Each terminal has one distinct function or step they need to perform.
 
-##  Functionality
+## Functionality
 
 - Load navigation files from the filesystem
 - Write events to the filesystem
@@ -33,13 +33,13 @@ Each terminal has one distinct function or step they need to perform.
 - Provide clipboard assistant when copying coordinates
 - ?
 
-## Structure of the app 
+## Structure of the app
 
 - Each folder in the challenges directory has a theme of what to teach
 - Different levels correspond to a different Tauri app
-- Each level has its own directory 
+- Each level has its own directory
 - From the UI you can only access start next level app if you have finished current level
-- For fuzzing you can access the different directories directly with the source code 
+- For fuzzing you can access the different directories directly with the source code
 - Metrics of the Tauri app are displayed (configuration, commands)
 
 ## challenges/space-navigator
