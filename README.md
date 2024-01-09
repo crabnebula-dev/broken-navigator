@@ -28,7 +28,7 @@ vulnerabilities and is meant as educational example.
 We have multiple `components` of the ship, where each component contains themed challenges.
 Find each challenge in the `challenges/<component>/[1-10]` sub directory of this repository.
 
-In general challenges can br solved on their own, however challenges may require knowledge gained from previous challenges.
+In general challenges can be solved on their own, however challenges may require knowledge gained from previous challenges.
 
 
 Please do **not** read the `INTERNAL.md` or source code of each challenge as they contain
