@@ -35,6 +35,6 @@ Access to the the write file Tauri command.
 
 ## Solution
 
-1. Open developer tools with system shortcut (`shift` or ` cmd``+crtl+i `)
+1. Open developer tools with system shortcut (`shift` or `cmd``+crtl+i`)
 2. Execute `window.__TAURI_INVOKE__("tauri",{__tauriModule:"Fs",message:{cmd:"writeFile",path: "navigation/active/Earth.cord", contents: [102, 108, 97, 103] , options: { dir: 17}}})` via console
 3. Click button to retrieve flag

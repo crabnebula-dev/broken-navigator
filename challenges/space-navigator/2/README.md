@@ -33,7 +33,7 @@ We got the interesting part of the configuration file of the navigator menu appl
 }
 ```
 
-The navigation application seems to have custom functions outside of the documented [Tauri API](https://tauri.app/v1/api/js/).
+The navigation application seems to have custom functions outside of the documented <a href="https://tauri.app/v1/api/js/" rel="noopener noreferrer" target="_blank">Tauri API</a>.
 It seems like we already know where the coordinates are but can not access them.
 There seems some functionality hidden in some elements to access them via the frontend.
 We heard that there is some shortcut to open the `developer tools`, maybe it is documented somewhere or you already know it.

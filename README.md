@@ -30,6 +30,7 @@ Find each challenge in the `challenges/<component>/[1-10]` sub directory of this
 
 In general challenges can br solved on their own, however challenges may require knowledge gained from previous challenges.
 
+
 Please do **not** read the `INTERNAL.md` or source code of each challenge as they contain
 solutions and internal structuring of the challenge, which would spoiler you playing the challenge.
 

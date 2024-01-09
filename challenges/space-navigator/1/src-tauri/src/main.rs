@@ -13,7 +13,7 @@ fn main() {
         .init();
 
     tauri::Builder::default()
-        .invoke_handler(tauri::generate_handler![commands::check_password,])
+        .invoke_handler(tauri::generate_handler![commands::check_flag])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

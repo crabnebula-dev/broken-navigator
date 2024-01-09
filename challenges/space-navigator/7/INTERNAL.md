@@ -9,7 +9,7 @@ passed to the backend.
 
 ## Application Layout
 
-- 
+-
 
 ## Hints
 
