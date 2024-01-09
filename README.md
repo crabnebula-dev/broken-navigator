@@ -1,5 +1,9 @@
 # Broken Navigator
 
+<div align="center">
+  <img src="imgs/logo.mini.nobg.png" alt="Broken Navigator Logo" title="Broken Navigator Logo">
+</div>
+
 ## Introduction
 [lets include details about project and purpose, features, and anything users should be aware of, and audience (who is for)]
 
