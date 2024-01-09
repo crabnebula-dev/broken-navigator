@@ -13,6 +13,7 @@ vulnerabilities and is meant as educational example.
 
 - [ ] Have Rust installed on your system ideally from [rustup.rs](https://rustup.rs)
 - [ ] Have `npm` or `pnpm` or similar installed to fetch the frontend dependencies
+- [ ] Install [Tauri prerequisites](https://tauri.app/v1/guides/getting-started/prerequisites)
 - [ ] Install `tauri-cli` via `cargo install tauri-cli --locked`
 - [ ] Install dependencies of the project with 
     ```sh
