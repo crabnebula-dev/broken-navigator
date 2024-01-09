@@ -1,7 +1,7 @@
 # Broken Navigator
 
 <div align="center">
-  <img src="imgs/logo.mini.nobg.png" alt="Broken Navigator Logo" title="Broken Navigator Logo">
+  <img src="imgs/logo.mini.png" alt="Broken Navigator Logo" title="Broken Navigator Logo">
 </div>
 
 ## Introduction
