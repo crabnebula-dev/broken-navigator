@@ -11,15 +11,15 @@ vulnerabilities and is meant as educational example.
 
  ### Challenge Checklist
 
-[ ] Have Rust installed on your system ideally from [rustup.rs](https://rustup.rs)
-[ ] Have `npm` or `pnpm` or similar installed to fetch the frontend dependencies
-[ ] Install `tauri-cli` via `cargo install tauri-cli --locked`
-[ ] Install dependencies of the project with 
+- [ ] Have Rust installed on your system ideally from [rustup.rs](https://rustup.rs)
+- [ ] Have `npm` or `pnpm` or similar installed to fetch the frontend dependencies
+- [ ] Install `tauri-cli` via `cargo install tauri-cli --locked`
+- [ ] Install dependencies of the project with 
     ```sh
     cd broken-navigator
     npm install
     ```
-[ ] Start with the first challenge 
+- [ ] Start with the first challenge 
     ```sh
     cd challenges/space-navigator/1
     cargo tauri dev
