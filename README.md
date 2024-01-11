@@ -1,9 +1,20 @@
+<a name="readme-top"></a>
 # Broken Navigator
+
+<div align="center">
+  <img src="imgs/logo.mini.png" alt="Broken Navigator Logo" title="Broken Navigator Logo">
+</div>
+
+## Introduction
+Broken Navigator is an innovative and engaging educational project designed to highlight vulnerabilities in application development, specifically focusing on Tauri applications. This project serves as a hands-on learning platform, offering a series of challenges that expose users to common insecure, weak, and improper code patterns prevalent in Tauri applications. Each challenge is themed around different components of a ship, making the learning process not only informative but also immersive and entertaining.
+
+The primary audience for Broken Navigator is developers and students who are new to Rust and Tauri applications, as well as those interested in application security. By navigating through the challenges, users can gain practical insights into what to consider when building Tauri commands and applications. Additionally, the project aims to create test cases for fuzzing tooling, enhancing the ability to test and improve fuzzing capabilities in software development.
+
+It's important for users to note that Broken Navigator contains intentional vulnerabilities and should be viewed strictly as an educational tool. Users are advised against using or copying code from this application into any productive application due to its intentional vulnerabilities.
 
 ## Disclaimer
 
-This project is an example of a vulnerable application. It contains intentional
-vulnerabilities and is meant as educational example.
+To reiterate, please be aware that Broken Navigator is an intentionally vulnerable application designed for educational purposes. It should not be used as a reference for production code, and care should be taken to avoid replicating its code patterns in real-world applications.
 
 **Please do not use or copy code from this application into any productive application!**
 
@@ -26,22 +37,13 @@ vulnerabilities and is meant as educational example.
     cargo tauri dev
     ```
 
-We have multiple `components` of the ship, where each component contains themed challenges.
-Find each challenge in the `challenges/<component>/[1-10]` sub directory of this repository.
+Each challenge is located within the challenges/<component>/[1-10] subdirectories. While challenges can generally be solved independently, some may require knowledge from previous ones.
 
-In general challenges can be solved on their own, however challenges may require knowledge gained from previous challenges.
-
-
-Please do **not** read the `INTERNAL.md` or source code of each challenge as they contain
-solutions and internal structuring of the challenge, which would spoiler you playing the challenge.
+To maintain the challenge integrity, please do not read the INTERNAL.md or the source code of each challenge, as they contain solutions and details about the challenge structure.
 
 
 ## Why is this application a thing?
 
-This set of applications is meant to showcase insecure, weak and improper code pattern commonly used in Tauri applications.
-It is meant to be educational and to show newcomers to Rust what they should consider when building
-Tauri `commands` or in general Tauri applications. It is also creating testcases for our fuzzing tooling and allows us to
-test and improve our fuzzing capabilities.
+Broken Navigator aims to educate newcomers to Rust and Tauri applications about potential security pitfalls and coding mistakes. It highlights what should be considered when developing secure Tauri applications and serves as a testbed for fuzzing tools. This approach is inspired by the [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/), a similar project focusing on vulnerabilities in web applications.
 
-A similar project is the [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/), which is focused on web applications running
-in the browser.
+<p align="center">[<a href="#readme-top">RETURN TO TOP</a>]</p>
