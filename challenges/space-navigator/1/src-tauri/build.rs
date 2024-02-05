@@ -3,8 +3,8 @@ use rand::Rng;
 use rand::distributions::Alphanumeric;
 
 fn main() {
-     // Generate Random Flag
-    let mut flag: String = String::from("Flag-");
+    // Generate Random Flag
+    let mut flag: String = String::from("FLAG-");
     let rand_str: String = rand::thread_rng()
     .sample_iter(&Alphanumeric)
     .take(8)
