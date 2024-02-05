@@ -3,3 +3,4 @@ dist
 target
 .vscode/settings.json
 challenges/space-navigator/1/src-tauri/logs/navigator.log
+challenges/space-navigator/2/src-tauri/navigation/coordinates.flag
