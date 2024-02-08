@@ -33,7 +33,7 @@ pub fn load_navigation_readme(path: &Path) -> String {
 #[instrument(level = "trace")]
 #[tauri::command]
 pub fn check_flag(flag: &str) -> bool {
-    let result = flag == "X:1234Y:1234Z:12345T:12345";
+    let result = flag == env!("FLAG","No flag var found.");
 
     info!(
         "The Navigator checked flag {flag} and it was {}",

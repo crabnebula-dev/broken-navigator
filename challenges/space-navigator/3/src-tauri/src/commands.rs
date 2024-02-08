@@ -12,7 +12,7 @@ pub fn get_validation_code(seed: &str, app: AppHandle) -> String {
     match flag {
         Ok(exists) => {
             if exists {
-                "FLAG-123456789".to_string()
+                env!("FLAG","No flag var found.").to_string()
             } else {
                 "No coordinates set".to_string()
             }
@@ -24,7 +24,7 @@ pub fn get_validation_code(seed: &str, app: AppHandle) -> String {
 #[instrument(level = "trace")]
 #[tauri::command]
 pub fn check_flag(flag: &str) -> bool {
-    let result = flag == "FLAG-123456789";
+    let result = flag == env!("FLAG","No flag var found.");
 
     info!(
         "The Navigator checked flag {flag} and it was {}",

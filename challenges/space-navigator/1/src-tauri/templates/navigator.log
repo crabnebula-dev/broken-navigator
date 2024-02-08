@@ -38,7 +38,7 @@
 [2021-11-28T10:12:55Z] [WARN] Wormhole calculation failed. Resuming normal course.
 [2021-11-28T10:13:00Z] [DEBUG] Successfully adjusted course for normal travel.
 [2021-11-28T10:13:30Z] [INFO] Entering Delta Quadrant of the Crab Nebula.
-[2021-11-28T12:00:00Z] [INFO] Successful Navigator user authentication to console with Password: foobar1234567.
+[2021-11-28T12:00:00Z] [INFO] Successful Navigator user authentication to console with Password: {{FLAG}}.
 [2021-11-28T10:14:00Z] [TRACE] Navigating to Nebula G-89.
 [2021-11-28T10:14:15Z] [INFO] Successfully passed through Nebula G-89.
 [2021-11-28T10:14:30Z] [TRACE] Calculating coordinates for nearby space system: Stellar Cluster Z-12.

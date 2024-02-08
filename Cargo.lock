@@ -161,6 +161,7 @@ dependencies = [
 name = "broken-navigator-four"
 version = "0.1.0"
 dependencies = [
+ "rand 0.8.5",
  "serde",
  "serde_json",
  "tauri",
@@ -172,6 +173,7 @@ dependencies = [
 name = "broken-navigator-one"
 version = "0.0.0"
 dependencies = [
+ "rand 0.8.5",
  "serde",
  "serde_json",
  "tauri",
@@ -185,6 +187,7 @@ dependencies = [
 name = "broken-navigator-three"
 version = "0.0.0"
 dependencies = [
+ "rand 0.8.5",
  "serde",
  "serde_json",
  "tauri",
@@ -198,6 +201,7 @@ dependencies = [
 name = "broken-navigator-two"
 version = "0.0.0"
 dependencies = [
+ "rand 0.8.5",
  "serde",
  "serde_json",
  "tauri",
