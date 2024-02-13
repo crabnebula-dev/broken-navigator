@@ -34,7 +34,7 @@ To reiterate, please be aware that Broken Navigator is an intentionally vulnerab
 - [ ] Start with the first challenge 
     ```sh
     cd challenges/space-navigator/1
-    cargo tauri dev
+    npm run tauri dev
     ```
 
 Each challenge is located within the `challenges/<component>/[1-x]` subdirectories. While challenges can generally be solved independently, some may require knowledge from previous ones.
