@@ -2,7 +2,7 @@
 # Broken Navigator
 
 <div align="center">
-  <img src="imgs/logo.mini.png" alt="Broken Navigator Logo" title="Broken Navigator Logo">
+  <img src="images/logo.mini.nobg.png" alt="Broken Navigator Logo" title="Broken Navigator Logo">
 </div>
 
 ## Introduction
@@ -37,9 +37,9 @@ To reiterate, please be aware that Broken Navigator is an intentionally vulnerab
     cargo tauri dev
     ```
 
-Each challenge is located within the challenges/<component>/[1-10] subdirectories. While challenges can generally be solved independently, some may require knowledge from previous ones.
+Each challenge is located within the `challenges/<component>/[1-x]` subdirectories. While challenges can generally be solved independently, some may require knowledge from previous ones.
 
-To maintain the challenge integrity, please do not read the INTERNAL.md or the source code of each challenge, as they contain solutions and details about the challenge structure.
+> To maintain the challenge integrity, please do not read the `INTERNAL.md` or the source code of each challenge before playing, as they contain solutions and details about the challenge structure.
 
 
 ## Why is this application a thing?
