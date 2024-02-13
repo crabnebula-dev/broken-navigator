@@ -34,6 +34,8 @@ To reiterate, please be aware that Broken Navigator is an intentionally vulnerab
 - [ ] Start with the first challenge 
     ```sh
     cd challenges/space-navigator/1
+    npm run tauri dev
+    # or
     cargo tauri dev
     ```
 
