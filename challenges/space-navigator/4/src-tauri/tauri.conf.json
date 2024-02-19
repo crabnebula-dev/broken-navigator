@@ -7,7 +7,7 @@
     "distDir": "../dist"
   },
   "package": {
-    "productName": "broken-navigator-four",
+    "productName": "space-navigator-4",
     "version": "1.0.0"
   },
   "tauri": {

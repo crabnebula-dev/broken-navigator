@@ -158,60 +158,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "broken-navigator-four"
-version = "1.0.0"
-dependencies = [
- "rand 0.8.5",
- "serde",
- "serde_json",
- "tauri",
- "tauri-build",
- "tracing",
-]
-
-[[package]]
-name = "broken-navigator-one"
-version = "1.0.0"
-dependencies = [
- "rand 0.8.5",
- "serde",
- "serde_json",
- "tauri",
- "tauri-build",
- "tracing",
- "tracing-subscriber",
- "url",
-]
-
-[[package]]
-name = "broken-navigator-three"
-version = "1.0.0"
-dependencies = [
- "rand 0.8.5",
- "serde",
- "serde_json",
- "tauri",
- "tauri-build",
- "tracing",
- "tracing-subscriber",
- "url",
-]
-
-[[package]]
-name = "broken-navigator-two"
-version = "1.0.0"
-dependencies = [
- "rand 0.8.5",
- "serde",
- "serde_json",
- "tauri",
- "tauri-build",
- "tracing",
- "tracing-subscriber",
- "url",
-]
-
-[[package]]
 name = "brotli"
 version = "3.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2519,6 +2465,60 @@ dependencies = [
  "gobject-sys",
  "libc",
  "system-deps 5.0.0",
+]
+
+[[package]]
+name = "space-navigator-1"
+version = "1.0.0"
+dependencies = [
+ "rand 0.8.5",
+ "serde",
+ "serde_json",
+ "tauri",
+ "tauri-build",
+ "tracing",
+ "tracing-subscriber",
+ "url",
+]
+
+[[package]]
+name = "space-navigator-2"
+version = "1.0.0"
+dependencies = [
+ "rand 0.8.5",
+ "serde",
+ "serde_json",
+ "tauri",
+ "tauri-build",
+ "tracing",
+ "tracing-subscriber",
+ "url",
+]
+
+[[package]]
+name = "space-navigator-3"
+version = "1.0.0"
+dependencies = [
+ "rand 0.8.5",
+ "serde",
+ "serde_json",
+ "tauri",
+ "tauri-build",
+ "tracing",
+ "tracing-subscriber",
+ "url",
+]
+
+[[package]]
+name = "space-navigator-4"
+version = "1.0.0"
+dependencies = [
+ "rand 0.8.5",
+ "serde",
+ "serde_json",
+ "tauri",
+ "tauri-build",
+ "tracing",
 ]
 
 [[package]]
