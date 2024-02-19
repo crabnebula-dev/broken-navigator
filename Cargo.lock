@@ -159,7 +159,7 @@ dependencies = [
 
 [[package]]
 name = "broken-navigator-four"
-version = "0.1.0"
+version = "1.0.0"
 dependencies = [
  "rand 0.8.5",
  "serde",
@@ -171,7 +171,7 @@ dependencies = [
 
 [[package]]
 name = "broken-navigator-one"
-version = "0.0.0"
+version = "1.0.0"
 dependencies = [
  "rand 0.8.5",
  "serde",
@@ -185,7 +185,7 @@ dependencies = [
 
 [[package]]
 name = "broken-navigator-three"
-version = "0.0.0"
+version = "1.0.0"
 dependencies = [
  "rand 0.8.5",
  "serde",
@@ -199,7 +199,7 @@ dependencies = [
 
 [[package]]
 name = "broken-navigator-two"
-version = "0.0.0"
+version = "1.0.0"
 dependencies = [
  "rand 0.8.5",
  "serde",
