@@ -1,0 +1,85 @@
+name: "Build and publish challenges"
+
+on:
+  push:
+    branches:
+      - release
+
+# This workflow will build the challenges and publish the binary artifacts as release
+
+jobs:
+  build-release-challenges:
+    strategy:
+      fail-fast: false
+      matrix:
+        platform: [ubuntu-20.04]
+        #platform: [macos-latest, ubuntu-20.04, windows-latest]
+
+    runs-on: ${{ matrix.platform }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Rust stable
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Rust cache
+        uses: Swatinem/rust-cache@v2
+
+      - name: Install dependencies (ubuntu only)
+        if: matrix.platform == 'ubuntu-20.04'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.0-dev libappindicator3-dev librsvg2-dev patchelf
+
+      - name: Install frontend dependencies
+        run: npm install
+
+      - name: Build challenge 1
+        uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          projectPath: ./challenges/space-navigator/1
+          tagName: v__VERSION__ 
+          releaseName: "Challenges v__VERSION__"
+          releaseBody: "See the assets to download this version and install."
+          releaseDraft: true
+          prerelease: false
+
+      - name: Build challenge 2
+        uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          projectPath: ./challenges/space-navigator/2
+          tagName: v__VERSION__ 
+          releaseName: "Challenges v__VERSION__"
+          releaseDraft: true
+          prerelease: false
+
+      - name: Build challenge 3
+        uses: tauri-apps/tauri-action@v0
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+            projectPath: ./challenges/space-navigator/3
+            tagName: v__VERSION__ 
+            releaseName: "Challenges v__VERSION__"
+            releaseDraft: true
+            prerelease: false
+
+      - name: Build challenge 4
+        uses: tauri-apps/tauri-action@v0
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+            projectPath: ./challenges/space-navigator/4
+            tagName: v__VERSION__ 
+            releaseName: "Challenges v__VERSION__"
+            releaseDraft: true
+            prerelease: false
