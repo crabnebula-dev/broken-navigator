@@ -9,7 +9,7 @@ it in the "_Solution_" tab. Please note that the solution flag layout can be dif
 ## Description
 
 We tried to open up the navigation console to locate the coordinates for earth but
-we got prompted with a password input. We don't know ths password and it seems
+we got prompted with a password input. We don't know the password and it seems
 like it is not documented.
 One of the notes for the password indicates that it could be logged somewhere.
 We only have access to the welcome menu, where we can load system documentation.
