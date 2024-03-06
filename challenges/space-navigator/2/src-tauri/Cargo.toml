@@ -1,6 +1,6 @@
 [package]
-name = "broken-navigator-two"
-version = "0.0.0"
+name = "space-navigator-2"
+version = "1.0.0"
 description = "A Tauri App"
 authors = ["you"]
 license = ""
