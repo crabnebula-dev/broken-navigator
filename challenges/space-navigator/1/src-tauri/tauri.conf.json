@@ -7,8 +7,8 @@
     "withGlobalTauri": false
   },
   "package": {
-    "productName": "broken-navigator",
-    "version": "0.0.0"
+    "productName": "space-navigator-1",
+    "version": "1.0.0"
   },
   "tauri": {
     "allowlist": {
